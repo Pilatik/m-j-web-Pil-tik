@@ -335,6 +335,44 @@ button {
   line-height: 1;
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-title .section-title-label {
+  color: var(--ink);
+}
+
+.section-title .section-title-label span {
+  color: #77776d;
+}
+
+.section-icon {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: none;
+  color: var(--muted);
+}
+
+.section-title .section-icon {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-eyebrow .section-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
 .section-intro {
   max-width: 21rem;
   margin: 0 0 0.35rem;
