@@ -3,33 +3,124 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
+  <meta name="description" content="Portfólio Mena Priezviska — výber projektov z oblasti dizajnu a digitálnej tvorby.">
+  <meta name="theme-color" content="#f5f4f0">
+  <title>Meno Priezvisko — portfólio</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="wordmark" href="#uvod" aria-label="Meno Priezvisko — úvod">MP<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="hlavna-navigacia">
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="hlavna-navigacia" aria-label="Hlavná navigácia">
+      <a href="#projekty">Projekty</a>
+      <a href="#o-mne">O mne</a>
+      <a class="nav-contact" href="#kontakt">Kontakt <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-  <main class="uvitanie">
-    <div class="emoji">❤️</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
+  <main>
+    <section class="hero section-shell" id="uvod" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="availability-dot"></span> Dizajn · digitálna tvorba · Slovensko</p>
+        <h1 id="hero-title">Ahoj, som<br><span>Meno Priezvisko.</span></h1>
+        <p class="hero-description">Tvorím premyslené digitálne zážitky, ktoré spájajú čistý dizajn s každodennou funkčnosťou.</p>
+        <a class="button button-dark" href="#projekty">Pozrieť projekty <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art reveal" aria-label="Abstraktná kompozícia v neutrálnych farbách" role="img">
+        <div class="hero-art-frame">
+          <div class="hero-art-sun"></div>
+          <div class="hero-art-shape hero-art-shape-one"></div>
+          <div class="hero-art-shape hero-art-shape-two"></div>
+          <span class="hero-art-caption">Tvorba s citom<br>pre detail.</span>
+          <span class="hero-art-index">01 — 03</span>
+        </div>
+        <span class="hero-side-note">Vybrané práce · 2022—2025</span>
+      </div>
+      <a class="scroll-note" href="#projekty"><span></span> Roluj nižšie</a>
+    </section>
 
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
-    </div>
+    <section class="projects section-shell" id="projekty" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Výber z mojej tvorby</p>
+          <h2 id="projects-title">Projekty<span>.</span></h2>
+        </div>
+        <p class="section-intro">Každý projekt začína dobrou otázkou. Tu sú tri príbehy, ktoré stoja za pozretie.</p>
+      </div>
 
-    <p class="poznamka, haha">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-visual visual-studio" role="img" aria-label="Vizuál identity značky Ateliér keramiky">
+            <div class="studio-poster">
+              <span class="poster-kicker">Ateliér keramiky</span>
+              <span class="poster-title">tvar<br>v čase</span>
+              <span class="poster-mark">A.</span>
+            </div>
+          </div>
+          <div class="project-meta"><span>Identita značky</span><span>2025</span></div>
+          <h3>Ateliér</h3>
+          <p>Vizuálny svet pre značku, ktorá nachádza krásu v nedokonalosti.</p>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual visual-nord" role="img" aria-label="Ukážka webového dizajnu Nord Living">
+            <div class="nord-window">
+              <div class="nord-topline"><span>NORD</span><span>Domov / Kolekcia</span><span>Košík (0)</span></div>
+              <div class="nord-photo"><span>Priestor<br>pre pokoj.</span></div>
+              <div class="nord-bottomline"><span>Objavte kolekciu</span><span>01 — 04</span></div>
+            </div>
+          </div>
+          <div class="project-meta"><span>Webový dizajn</span><span>2024</span></div>
+          <h3>Nord Living</h3>
+          <p>Pokojný online obchod s nábytkom inšpirovaným škandinávskym bývaním.</p>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-visual visual-pomimo" role="img" aria-label="Ukážka mobilnej aplikácie Pomimo">
+            <div class="phone-mockup">
+              <div class="phone-camera"></div>
+              <span class="phone-greeting">Dobrý deň,<br>kam dnes?</span>
+              <div class="phone-map"><span class="map-route"></span><span class="map-pin">✳</span></div>
+              <span class="phone-place">Malé objavy<br>čakajú za rohom.</span>
+            </div>
+          </div>
+          <div class="project-meta"><span>Digitálny produkt</span><span>2024</span></div>
+          <h3>Pomimo</h3>
+          <p>Návrh aplikácie, ktorá mení obyčajnú prechádzku na malé dobrodružstvo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="o-mne" aria-labelledby="about-title">
+      <div class="about-inner section-shell">
+        <p class="eyebrow reveal">Trochu o mne</p>
+        <div class="about-content reveal">
+          <h2 id="about-title">Verím, že dobrý dizajn je ten, ktorý <span>cítiť — nie vidieť.</span></h2>
+          <div class="about-details">
+            <p>Som nezávislý dizajnér a tvorca. Pomáham značkám a ľuďom premieňať dobré nápady na jasné, funkčné a príjemné digitálne zážitky.</p>
+            <p>Pri práci ma baví hľadať jednoduchosť, ktorá má zmysel. Keď práve netvorím, pravdepodobne objavujem nové miesta alebo pijem ďalšiu kávu.</p>
+          </div>
+          <a class="text-link" href="mailto:ahoj@example.com">Napíš mi <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer section-shell" id="kontakt">
+    <div class="footer-main reveal">
+      <p class="eyebrow">Máš nápad? Poďme ho pretaviť do reality.</p>
+      <a class="footer-email" href="mailto:ahoj@example.com">Ozvi sa mi<span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="footer-bottom">
+      <a class="wordmark" href="#uvod" aria-label="Meno Priezvisko — späť na úvod">MP<span>.</span></a>
+      <p>© <span id="current-year">2026</span> Meno Priezvisko</p>
+      <a href="#uvod">Späť na začiatok ↑</a>
+    </div>
+  </footer>
 </body>
 </html>
