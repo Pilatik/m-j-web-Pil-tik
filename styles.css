@@ -74,18 +74,35 @@ button {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(1.5rem, 4vw, 3.75rem);
-  font-size: 0.83rem;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .site-nav a,
 .footer-bottom > a:last-child {
-  transition: opacity 180ms ease;
+  transition: color 180ms ease, background-color 180ms ease, opacity 180ms ease;
 }
 
 .site-nav a:hover,
 .footer-bottom > a:last-child:hover {
   opacity: 0.58;
+}
+
+.site-nav .nav-contact {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--white);
+}
+
+.site-nav .nav-contact:hover {
+  background: transparent;
+  color: var(--ink);
+  opacity: 1;
 }
 
 .nav-contact span {
@@ -879,6 +896,13 @@ button {
 
   .js .site-nav a + a {
     border-top: 1px solid var(--line);
+  }
+
+  .js .site-nav .nav-contact {
+    align-self: flex-start;
+    min-height: 2.8rem;
+    margin: 0.65rem 0;
+    border: 1px solid var(--ink);
   }
 
   .hero {
