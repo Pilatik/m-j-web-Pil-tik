@@ -181,6 +181,13 @@ button {
   color: var(--ink);
 }
 
+.hero-doodle {
+  display: block;
+  width: clamp(7rem, 11vw, 9rem);
+  height: auto;
+  margin: 1.75rem 0 0 auto;
+}
+
 .hero-art {
   position: relative;
   width: min(100%, 34rem);
