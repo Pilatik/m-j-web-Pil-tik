@@ -649,6 +649,23 @@ button {
   transform: translate(3px, -3px);
 }
 
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  margin-top: 1.35rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.contact-details a {
+  transition: color 180ms ease;
+}
+
+.contact-details a:hover {
+  color: var(--ink);
+}
+
 .footer-bottom {
   display: flex;
   min-height: 4rem;
