@@ -426,168 +426,16 @@ button {
   overflow: hidden;
 }
 
-.visual-studio {
-  background: #c8bfb0;
-}
-
-.studio-poster {
-  position: relative;
-  display: flex;
-  width: 58%;
-  height: 74%;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  background: #eee9df;
-  box-shadow: 0 0.8rem 2.5rem rgb(49 43 33 / 15%);
-  transform: rotate(-4deg);
+.project-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.poster-kicker {
-  font-size: clamp(0.4rem, 0.8vw, 0.62rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.poster-title {
-  font-size: clamp(1.6rem, 3.5vw, 3.5rem);
-  letter-spacing: -0.1em;
-  line-height: 0.9;
-}
-
-.poster-mark {
-  align-self: flex-end;
-  color: #9c7156;
-  font-family: Georgia, serif;
-  font-size: 1.25rem;
-  font-style: italic;
-}
-
-.visual-nord {
-  background: #d3d4ce;
-}
-
-.nord-window {
-  width: 82%;
-  padding: 0.75rem 0.8rem 0.55rem;
-  background: #f7f6f1;
-  box-shadow: 0 1rem 2.5rem rgb(39 41 36 / 16%);
-  transform: rotate(2deg);
-  transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.nord-topline,
-.nord-bottomline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #474840;
-  font-size: clamp(0.35rem, 0.7vw, 0.52rem);
-}
-
-.nord-topline span:first-child {
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.nord-photo {
-  display: flex;
-  height: 11rem;
-  align-items: end;
-  margin-block: 0.65rem;
-  padding: 0.9rem;
-  background:
-    linear-gradient(90deg, rgb(45 46 39 / 38%), transparent 85%),
-    linear-gradient(0deg, #9d9a8b 0%, #c8c4b8 45%, #e1ded4 45%, #c9c7bc 100%);
-}
-
-.nord-photo span {
-  color: var(--white);
-  font-size: 1.25rem;
-  letter-spacing: -0.07em;
-  line-height: 1.05;
-}
-
-.visual-pomimo {
-  background: #d5c9b9;
-}
-
-.phone-mockup {
-  position: relative;
-  display: flex;
-  width: 47%;
-  height: 79%;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 1.15rem 0.85rem 0.85rem;
-  border: 0.35rem solid #f7f6f1;
-  border-radius: 1.3rem;
-  background: #e8e9df;
-  box-shadow: 0 1rem 2.5rem rgb(46 41 34 / 20%);
-  transform: rotate(-5deg);
-  transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.phone-camera {
-  position: absolute;
-  top: 0.3rem;
-  left: 50%;
-  width: 1.7rem;
-  height: 0.18rem;
-  border-radius: 1rem;
-  background: #b7b7ab;
-  transform: translateX(-50%);
-}
-
-.phone-greeting {
-  font-size: clamp(0.6rem, 1.25vw, 1rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.15;
-}
-
-.phone-map {
-  position: relative;
-  flex: 1;
-  margin: 0.75rem -0.2rem 0.55rem;
-  overflow: hidden;
-  background-color: #d9dece;
-  background-image:
-    linear-gradient(34deg, transparent 47%, #f7f6f1 48%, #f7f6f1 51%, transparent 52%),
-    linear-gradient(130deg, transparent 42%, #f7f6f1 43%, #f7f6f1 46%, transparent 47%),
-    linear-gradient(80deg, transparent 67%, #c2cbb7 68%, #c2cbb7 73%, transparent 74%);
-}
-
-.map-route {
-  position: absolute;
-  top: 23%;
-  left: 43%;
-  width: 40%;
-  height: 55%;
-  border: 1px dashed #717e5b;
-  border-left: 0;
-  border-radius: 0 60% 50% 0;
-  transform: rotate(18deg);
-}
-
-.map-pin {
-  position: absolute;
-  top: 42%;
-  left: 52%;
-  color: #889174;
-  font-size: 1.1rem;
-}
-
-.phone-place {
-  font-size: clamp(0.43rem, 0.85vw, 0.66rem);
-  line-height: 1.3;
-}
-
-.project-visual:hover .studio-poster,
-.project-visual:hover .nord-window,
-.project-visual:hover .phone-mockup {
-  transform: rotate(0) scale(1.035);
+.project-visual:hover .project-image {
+  transform: scale(1.035);
 }
 
 .project-meta {
@@ -647,9 +495,7 @@ button {
 
 .about-details {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 2.3rem;
+  gap: 1rem;
 }
 
 .about-details p {
@@ -657,6 +503,22 @@ button {
   color: #5e5e58;
   font-size: 0.88rem;
   line-height: 1.85;
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(12rem, 0.7fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: 2.3rem;
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 28%;
 }
 
 .text-link {
@@ -810,13 +672,13 @@ button {
     margin-top: 3rem;
   }
 
-  .nord-photo {
-    height: 9rem;
-  }
-
   .about-inner {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .about-body {
+    grid-template-columns: minmax(0, 1.5fr) minmax(10rem, 0.7fr);
   }
 }
 
@@ -971,39 +833,23 @@ button {
     aspect-ratio: 1.12;
   }
 
-  .nord-photo {
-    height: 12rem;
-  }
-
-  .poster-kicker {
-    font-size: 0.58rem;
-  }
-
-  .poster-title {
-    font-size: 3.2rem;
-  }
-
-  .phone-greeting {
-    font-size: 1rem;
-  }
-
-  .phone-place {
-    font-size: 0.62rem;
-  }
-
   .about-inner {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
 
-  .about h2 {
-    font-size: clamp(2.6rem, 11vw, 4rem);
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-top: 1.5rem;
   }
 
-  .about-details {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem;
+  .about-portrait {
+    width: min(100%, 22rem);
+  }
+
+  .about h2 {
+    font-size: clamp(2.6rem, 11vw, 4rem);
   }
 
   .site-footer {
