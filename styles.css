@@ -545,10 +545,15 @@ button {
 }
 
 .footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 1.5rem 2rem;
   padding-bottom: clamp(4.5rem, 9vw, 8rem);
 }
 
 .footer-main .eyebrow {
+  grid-column: 1 / -1;
   margin-bottom: 0.85rem;
 }
 
@@ -580,11 +585,15 @@ button {
 
 .contact-details {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 2rem;
-  margin-top: 1.35rem;
+  flex-direction: column;
+  gap: 0.35rem;
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+.contact-details address {
+  margin-top: 0.4rem;
+  font-style: normal;
 }
 
 .contact-details a {
@@ -854,6 +863,15 @@ button {
 
   .site-footer {
     padding-top: 4.5rem;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-main .eyebrow {
+    grid-column: auto;
   }
 
   .footer-main {
